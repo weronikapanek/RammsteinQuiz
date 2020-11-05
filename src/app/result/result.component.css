@@ -1,0 +1,8 @@
+h1 {
+    color: white;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
