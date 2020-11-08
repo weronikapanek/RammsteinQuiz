@@ -14,18 +14,19 @@ export class MemberstestComponent implements OnInit {
   quizForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { 
-    this.quizForm = formBuilder.group({
+    
+  }
+
+  ngOnInit(): void {
+    this.quizForm = this.formBuilder.group({
       name: ['', [Validators.required],
-                [Validators.minLength(2)],
+                [Validators.minLength(3)],
                 [Validators.maxLength(10)]],
       freeTime: ['', Validators.required],
       instrument: ['', Validators.required],
       RammsteinAge: ['', Validators.required]
     });
     
-  }
-
-  ngOnInit(): void {
   }
 
 }
